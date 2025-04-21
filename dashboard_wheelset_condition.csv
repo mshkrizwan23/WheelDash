@@ -1,0 +1,21 @@
+Wheelset Serial,Wagon Number,Wheelset Position,Flange Height L,Flange Height R,Flange Thickness L,Flange Thickness R,Diameter L,Diameter R,Wheel Tread Defects,Wheel Web Defects,Axlebox Temp / HABD Activated,Notes,Condition Alert Summary
+WS00000,640331,1,32.8,31.3,28.7,27.9,777,798,No,No,No,None,⚠️ Flange Height | ⚠️ Flange Thickness
+WS00001,640331,3,28.9,31.6,27.5,29.1,780,813,No,Yes,Yes,Slight tread mark,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ Web Defects | ⚠️ HABD Trigger
+WS00002,640331,1,30.5,33.7,31.9,31.6,781,819,Yes,No,Yes,WILD defect alert,⚠️ Flange Height | ⚠️ Tread Defects | ⚠️ HABD Trigger
+WS00003,640321,1,33.0,28.4,29.5,30.0,788,781,Yes,No,Yes,Slight tread mark,⚠️ Flange Height | ⚠️ Tread Defects | ⚠️ HABD Trigger
+WS00004,640331,1,33.4,31.8,29.5,31.0,771,775,Yes,Yes,Yes,WILD defect alert,⚠️ Flange Height | ⚠️ Diameter | ⚠️ Tread Defects | ⚠️ Web Defects | ⚠️ HABD Trigger
+WS00005,640331,1,29.2,28.4,28.2,28.5,829,800,No,Yes,Yes,WILD defect alert,⚠️ Flange Thickness | ⚠️ Web Defects | ⚠️ HABD Trigger
+WS00006,640331,1,32.6,33.8,27.5,27.5,821,810,Yes,Yes,Yes,None,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ Tread Defects | ⚠️ Web Defects | ⚠️ HABD Trigger
+WS00007,640341,4,28.5,31.6,27.6,31.2,803,775,Yes,No,Yes,None,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ Tread Defects | ⚠️ HABD Trigger
+WS00008,640321,3,32.2,32.8,30.9,31.8,812,782,No,No,No,Visual OK,⚠️ Flange Height
+WS00009,640341,3,29.4,33.4,27.3,31.3,777,797,Yes,Yes,No,WILD defect alert,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ Tread Defects | ⚠️ Web Defects
+WS00010,640341,2,30.9,30.0,30.1,31.9,833,803,Yes,No,Yes,Slight tread mark,⚠️ Tread Defects | ⚠️ HABD Trigger
+WS00011,640331,1,33.2,31.7,30.3,29.0,807,812,No,No,No,None,⚠️ Flange Height
+WS00012,640341,2,28.0,29.6,30.1,29.0,834,827,Yes,No,No,Slight tread mark,⚠️ Tread Defects
+WS00013,640321,4,32.1,31.8,28.9,31.8,827,830,Yes,No,Yes,None,⚠️ Flange Height | ⚠️ Tread Defects | ⚠️ HABD Trigger
+WS00014,640341,3,30.2,30.9,29.0,30.3,778,778,No,No,Yes,WILD defect alert,⚠️ HABD Trigger
+WS00015,640321,2,27.8,32.1,27.4,30.8,817,816,Yes,Yes,No,None,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ Tread Defects | ⚠️ Web Defects
+WS00016,640341,1,30.3,32.0,28.3,31.2,785,832,No,No,Yes,WILD defect alert,⚠️ Flange Height | ⚠️ Flange Thickness | ⚠️ HABD Trigger
+WS00017,640341,3,34.0,32.1,31.6,31.1,800,827,Yes,Yes,No,Visual OK,⚠️ Flange Height | ⚠️ Tread Defects | ⚠️ Web Defects
+WS00018,640321,4,30.0,29.0,30.1,27.8,823,774,Yes,Yes,No,Visual OK,⚠️ Flange Thickness | ⚠️ Diameter | ⚠️ Tread Defects | ⚠️ Web Defects
+WS00019,640341,1,31.5,32.2,30.2,31.2,787,834,Yes,Yes,No,None,⚠️ Flange Height | ⚠️ Tread Defects | ⚠️ Web Defects
