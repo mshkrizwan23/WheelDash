@@ -1,39 +1,43 @@
 import dash
-from dash import dcc, html
+from dash import html, dcc, Input, Output
 import pandas as pd
-import plotly.express as px
-import dash_bootstrap_components as dbc
 
-external_stylesheets = [dbc.themes.SLATE]
+# Sample internal dataset (this would usually be imported or generated)
+data = pd.DataFrame({
+    'Wheelset Serial': ['WS0001', 'WS0002', 'WS0003'],
+    'Status': ['OK', 'Warning', 'Replace'],
+    'Last Maintenance': ['2024-09-01', '2024-06-15', '2024-01-20'],
+    'Depot': ['Hunslet', 'Bescot', 'Southampton'],
+    'Remarks': ['Profile corrected', 'Minor wear', 'Excessive wear']
+})
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__)
 server = app.server
 
-app.layout = dbc.Container([
-    dbc.NavbarSimple(
-        brand="🚆 Freight Wheelset Monitoring",
-        color="primary",
-        dark=True,
-    ),
-    dbc.Tabs([
-        dbc.Tab(label="Overview", tab_id="overview"),
-        dbc.Tab(label="Wheelset Status", tab_id="status"),
-        dbc.Tab(label="Maintenance History", tab_id="history"),
-    ], id="tabs", active_tab="overview"),
-    html.Div(id="tab-content")
+app.layout = html.Div([
+    html.H1("🛠️ Freight Wheelset Maintenance Dashboard"),
+    html.Div([
+        html.Div([
+            html.Div([
+                html.H4(f"{row['Wheelset Serial']}"),
+                html.P(f"Status: {row['Status']}"),
+                html.P(f"Last Maintenance: {row['Last Maintenance']}"),
+                html.P(f"Depot: {row['Depot']}"),
+                html.P(f"Remarks: {row['Remarks']}"),
+            ], style={
+                'border': '1px solid #ccc',
+                'padding': '10px',
+                'margin': '10px',
+                'border-radius': '8px',
+                'box-shadow': '2px 2px 10px rgba(0,0,0,0.1)',
+                'background': '#fff',
+                'width': '200px',
+                'display': 'inline-block',
+                'vertical-align': 'top'
+            }) for _, row in data.iterrows()
+        ])
+    ])
 ])
-
-@app.callback(
-    dash.dependencies.Output("tab-content", "children"),
-    [dash.dependencies.Input("tabs", "active_tab")]
-)
-def update_tab(tab):
-    if tab == "overview":
-        return html.Div("Dashboard overview and KPIs go here.")
-    elif tab == "status":
-        return html.Div("Live wheelset condition status here.")
-    elif tab == "history":
-        return html.Div("Maintenance record table here.")
 
 if __name__ == "__main__":
     app.run_server(debug=True)
