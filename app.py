@@ -1,53 +1,79 @@
 import dash
-from dash import dcc, html, dash_table
+from dash import dcc, html, Input, Output, State, dash_table
 import pandas as pd
-import plotly.express as px
+import base64
+import io
 
-# Load data
-wheelsets = pd.read_csv("wheelset_data.csv")
-inspections = pd.read_csv("inspection_data.csv")
-alerts = pd.read_csv("alerts.csv")
-kpi = pd.read_csv("kpi_data.csv")
-
-app = dash.Dash(__name__)
-app.title = "Freight Wheelset Dashboard"
-
-# Layout
-app.layout = html.Div([
-    html.H1("🚆 Freight Wagon Wheelset Dashboard", style={'textAlign': 'center', 'color': '#2c3e50'}),
-
-    html.H3("📋 Wheelset Summary"),
-    dash_table.DataTable(
-        data=wheelsets.to_dict('records'),
-        columns=[{"name": i, "id": i} for i in wheelsets.columns],
-        style_table={'overflowX': 'auto'},
-        page_size=5
-    ),
-
-    html.H3("🧪 Latest Inspection Logs"),
-    dash_table.DataTable(
-        data=inspections.to_dict('records'),
-        columns=[{"name": i, "id": i} for i in inspections.columns],
-        style_table={'overflowX': 'auto'},
-        page_size=5
-    ),
-
-    html.H3("🚨 Condition Alerts"),
-    dash_table.DataTable(
-        data=alerts.to_dict('records'),
-        columns=[{"name": i, "id": i} for i in alerts.columns],
-        style_table={'overflowX': 'auto'},
-        page_size=5
-    ),
-
-    html.H3("📊 Monthly KPIs"),
-    dcc.Graph(
-        figure=px.bar(kpi, x="Month", y=["Inspections", "Defects_Logged", "Wheelsets_Reprofiled"],
-                      barmode="group", title="Monthly KPI Trends")
-    )
-])
-
+app = dash.Dash(__name__, suppress_callback_exceptions=True)
 server = app.server
 
-if __name__ == "__main__":
+app.layout = html.Div([
+    html.H1("🚆 Freight Wheelset Maintenance Dashboard", style={'textAlign': 'center'}),
+
+    dcc.Tabs(id="tabs", value='tab-condition', children=[
+        dcc.Tab(label='Wheelset Condition Data', value='tab-condition'),
+        dcc.Tab(label='Maintenance Records', value='tab-maintenance'),
+    ]),
+    html.Div(id='tabs-content')
+])
+
+@app.callback(Output('tabs-content', 'children'),
+              Input('tabs', 'value'))
+def render_content(tab):
+    if tab == 'tab-condition':
+        return html.Div([
+            html.H3("Upload Wheelset Condition Data"),
+            dcc.Upload(
+                id='upload-condition',
+                children=html.Div(['📂 Drag and Drop or ', html.A('Select wheelset_condition_sample.csv')]),
+                style={'width': '60%', 'height': '60px', 'lineHeight': '60px',
+                       'borderWidth': '1px', 'borderStyle': 'dashed',
+                       'borderRadius': '5px', 'textAlign': 'center', 'margin': '10px'}
+            ),
+            html.Div(id='output-condition')
+        ])
+    elif tab == 'tab-maintenance':
+        return html.Div([
+            html.H3("Upload Maintenance Records"),
+            dcc.Upload(
+                id='upload-maintenance',
+                children=html.Div(['📂 Drag and Drop or ', html.A('Select maintenance_records_sample.csv')]),
+                style={'width': '60%', 'height': '60px', 'lineHeight': '60px',
+                       'borderWidth': '1px', 'borderStyle': 'dashed',
+                       'borderRadius': '5px', 'textAlign': 'center', 'margin': '10px'}
+            ),
+            html.Div(id='output-maintenance')
+        ])
+
+def parse_contents(contents, filename):
+    content_type, content_string = contents.split(',')
+    decoded = base64.b64decode(content_string)
+    try:
+        if 'csv' in filename:
+            df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
+            return dash_table.DataTable(
+                data=df.to_dict('records'),
+                columns=[{'name': i, 'id': i} for i in df.columns],
+                style_table={'overflowX': 'auto'},
+                style_cell={'textAlign': 'left'},
+                page_size=10
+            )
+    except Exception as e:
+        return html.Div(['There was an error processing this file.'])
+
+@app.callback(Output('output-condition', 'children'),
+              Input('upload-condition', 'contents'),
+              State('upload-condition', 'filename'))
+def update_condition(contents, filename):
+    if contents:
+        return parse_contents(contents, filename)
+
+@app.callback(Output('output-maintenance', 'children'),
+              Input('upload-maintenance', 'contents'),
+              State('upload-maintenance', 'filename'))
+def update_maintenance(contents, filename):
+    if contents:
+        return parse_contents(contents, filename)
+
+if __name__ == '__main__':
     app.run_server(debug=True, host="0.0.0.0", port=10000)
