@@ -1,61 +1,112 @@
-Wheelset Serial Number,Inspection Date,Flange Height L,Flange Height R,Diameter L,Diameter R,Maintenance Performed
-WS00001,2025-01-15,29,30,827,827,No
-WS00001,2025-02-15,30,31,828,828,Yes
-WS00001,2025-03-15,31,32,829,829,No
-WS00002,2025-01-15,29,30,827,827,No
-WS00002,2025-02-15,30,31,828,828,Yes
-WS00002,2025-03-15,31,32,829,829,No
-WS00003,2025-01-15,29,30,827,827,No
-WS00003,2025-02-15,30,31,828,828,Yes
-WS00003,2025-03-15,31,32,829,829,No
-WS00004,2025-01-15,29,30,827,827,No
-WS00004,2025-02-15,30,31,828,828,Yes
-WS00004,2025-03-15,31,32,829,829,No
-WS00005,2025-01-15,29,30,827,827,No
-WS00005,2025-02-15,30,31,828,828,Yes
-WS00005,2025-03-15,31,32,829,829,No
-WS00006,2025-01-15,29,30,827,827,No
-WS00006,2025-02-15,30,31,828,828,Yes
-WS00006,2025-03-15,31,32,829,829,No
-WS00007,2025-01-15,29,30,827,827,No
-WS00007,2025-02-15,30,31,828,828,Yes
-WS00007,2025-03-15,31,32,829,829,No
-WS00008,2025-01-15,29,30,827,827,No
-WS00008,2025-02-15,30,31,828,828,Yes
-WS00008,2025-03-15,31,32,829,829,No
-WS00009,2025-01-15,29,30,827,827,No
-WS00009,2025-02-15,30,31,828,828,Yes
-WS00009,2025-03-15,31,32,829,829,No
-WS00010,2025-01-15,29,30,827,827,No
-WS00010,2025-02-15,30,31,828,828,Yes
-WS00010,2025-03-15,31,32,829,829,No
-WS00011,2025-01-15,29,30,827,827,No
-WS00011,2025-02-15,30,31,828,828,Yes
-WS00011,2025-03-15,31,32,829,829,No
-WS00012,2025-01-15,29,30,827,827,No
-WS00012,2025-02-15,30,31,828,828,Yes
-WS00012,2025-03-15,31,32,829,829,No
-WS00013,2025-01-15,29,30,827,827,No
-WS00013,2025-02-15,30,31,828,828,Yes
-WS00013,2025-03-15,31,32,829,829,No
-WS00014,2025-01-15,29,30,827,827,No
-WS00014,2025-02-15,30,31,828,828,Yes
-WS00014,2025-03-15,31,32,829,829,No
-WS00015,2025-01-15,29,30,827,827,No
-WS00015,2025-02-15,30,31,828,828,Yes
-WS00015,2025-03-15,31,32,829,829,No
-WS00016,2025-01-15,29,30,827,827,No
-WS00016,2025-02-15,30,31,828,828,Yes
-WS00016,2025-03-15,31,32,829,829,No
-WS00017,2025-01-15,29,30,827,827,No
-WS00017,2025-02-15,30,31,828,828,Yes
-WS00017,2025-03-15,31,32,829,829,No
-WS00018,2025-01-15,29,30,827,827,No
-WS00018,2025-02-15,30,31,828,828,Yes
-WS00018,2025-03-15,31,32,829,829,No
-WS00019,2025-01-15,29,30,827,827,No
-WS00019,2025-02-15,30,31,828,828,Yes
-WS00019,2025-03-15,31,32,829,829,No
-WS00020,2025-01-15,29,30,827,827,No
-WS00020,2025-02-15,30,31,828,828,Yes
-WS00020,2025-03-15,31,32,829,829,No
+Wheelset Serial Number,Date,Maintenance Action,Depot,Remarks
+WS00001,2020-01-01,Replacement,Hunslet,Profile corrected
+WS00001,2020-05-16,Turning,Hunslet,Profile corrected
+WS00001,2022-02-01,Turning,Bescot,Profile corrected
+WS00001,2021-04-07,Turning,Southampton,OK
+WS00002,2020-01-01,Lubrication,Hunslet,OK
+WS00002,2020-12-31,Lubrication,Southampton,Replaced due to crack
+WS00002,2021-04-15,Lubrication,Bescot,Minor wear
+WS00002,2021-08-26,Lubrication,Bescot,OK
+WS00002,2022-03-27,Inspection,Southampton,OK
+WS00002,2021-11-21,Replacement,Bescot,Replaced due to crack
+WS00002,2023-11-05,Inspection,Hunslet,Replaced due to crack
+WS00002,2024-04-17,Inspection,Bescot,Minor wear
+WS00003,2020-01-01,Inspection,Southampton,OK
+WS00003,2020-04-24,Lubrication,Hunslet,Profile corrected
+WS00003,2022-01-12,Turning,Bescot,OK
+WS00003,2021-08-26,Lubrication,Crewe,Minor wear
+WS00004,2020-01-01,Turning,Crewe,Replaced due to crack
+WS00004,2020-08-25,Lubrication,Southampton,Minor wear
+WS00004,2021-06-22,Lubrication,Crewe,Replaced due to crack
+WS00004,2020-11-17,Turning,Crewe,Replaced due to crack
+WS00004,2022-10-09,Replacement,Hunslet,Profile corrected
+WS00004,2022-02-09,Inspection,Crewe,Profile corrected
+WS00005,2020-01-01,Turning,Hunslet,Profile corrected
+WS00005,2020-04-09,Turning,Southampton,Minor wear
+WS00005,2021-07-28,Inspection,Crewe,OK
+WS00005,2021-12-09,Replacement,Southampton,Replaced due to crack
+WS00005,2021-10-26,Turning,Bescot,Profile corrected
+WS00005,2025-03-30,Replacement,Bescot,OK
+WS00005,2026-02-10,Lubrication,Crewe,Minor wear
+WS00006,2020-01-01,Turning,Hunslet,Profile corrected
+WS00006,2020-05-20,Inspection,Crewe,Profile corrected
+WS00006,2020-08-20,Replacement,Bescot,Replaced due to crack
+WS00006,2022-04-29,Replacement,Bescot,Replaced due to crack
+WS00006,2023-11-29,Lubrication,Crewe,Profile corrected
+WS00007,2020-01-01,Lubrication,Hunslet,Replaced due to crack
+WS00007,2020-05-05,Lubrication,Hunslet,Replaced due to crack
+WS00007,2021-12-29,Lubrication,Hunslet,Profile corrected
+WS00007,2023-02-14,Lubrication,Southampton,OK
+WS00008,2020-01-01,Lubrication,Hunslet,Minor wear
+WS00008,2020-12-13,Inspection,Southampton,OK
+WS00008,2021-02-26,Turning,Crewe,OK
+WS00008,2022-06-07,Turning,Hunslet,OK
+WS00008,2022-09-15,Turning,Bescot,OK
+WS00008,2025-06-18,Replacement,Hunslet,Minor wear
+WS00008,2022-06-07,Lubrication,Bescot,OK
+WS00008,2022-10-19,Turning,Crewe,Minor wear
+WS00009,2020-01-01,Lubrication,Southampton,Profile corrected
+WS00009,2020-12-21,Inspection,Southampton,Minor wear
+WS00009,2021-08-03,Replacement,Hunslet,OK
+WS00009,2022-10-08,Inspection,Bescot,Profile corrected
+WS00009,2021-02-28,Replacement,Hunslet,OK
+WS00009,2022-04-20,Inspection,Hunslet,Minor wear
+WS00009,2021-08-17,Replacement,Southampton,Minor wear
+WS00009,2027-06-30,Replacement,Southampton,Minor wear
+WS00010,2020-01-01,Replacement,Crewe,Profile corrected
+WS00010,2020-05-19,Inspection,Bescot,OK
+WS00010,2021-11-29,Turning,Southampton,Replaced due to crack
+WS00010,2020-11-23,Lubrication,Southampton,Minor wear
+WS00010,2021-06-16,Turning,Bescot,Profile corrected
+WS00010,2021-05-20,Turning,Hunslet,Replaced due to crack
+WS00010,2021-09-10,Inspection,Hunslet,Minor wear
+WS00011,2020-01-01,Lubrication,Crewe,Profile corrected
+WS00011,2020-06-01,Turning,Crewe,Minor wear
+WS00011,2021-08-07,Replacement,Southampton,OK
+WS00011,2021-05-04,Lubrication,Crewe,Minor wear
+WS00011,2023-05-01,Inspection,Crewe,OK
+WS00012,2020-01-01,Replacement,Hunslet,Profile corrected
+WS00012,2020-09-29,Inspection,Bescot,Profile corrected
+WS00012,2020-10-29,Replacement,Bescot,Minor wear
+WS00012,2022-12-22,Replacement,Bescot,Profile corrected
+WS00012,2022-01-02,Turning,Southampton,Minor wear
+WS00012,2022-07-04,Inspection,Hunslet,Profile corrected
+WS00013,2020-01-01,Replacement,Crewe,Minor wear
+WS00013,2020-09-10,Turning,Southampton,Minor wear
+WS00013,2021-02-02,Lubrication,Hunslet,Minor wear
+WS00013,2021-08-14,Inspection,Crewe,OK
+WS00013,2024-02-17,Replacement,Crewe,Replaced due to crack
+WS00014,2020-01-01,Inspection,Hunslet,Minor wear
+WS00014,2020-12-04,Lubrication,Crewe,OK
+WS00014,2020-12-04,Lubrication,Bescot,Profile corrected
+WS00014,2022-03-18,Lubrication,Crewe,OK
+WS00014,2021-10-10,Lubrication,Bescot,Minor wear
+WS00014,2023-07-19,Replacement,Crewe,Replaced due to crack
+WS00014,2022-07-25,Inspection,Bescot,Profile corrected
+WS00015,2020-01-01,Replacement,Southampton,Replaced due to crack
+WS00015,2020-05-20,Replacement,Hunslet,OK
+WS00015,2022-01-02,Turning,Crewe,Replaced due to crack
+WS00016,2020-01-01,Lubrication,Southampton,Minor wear
+WS00016,2020-05-12,Replacement,Bescot,Profile corrected
+WS00016,2021-06-24,Inspection,Southampton,OK
+WS00016,2021-08-11,Inspection,Southampton,Replaced due to crack
+WS00016,2022-03-11,Lubrication,Hunslet,Minor wear
+WS00016,2025-05-09,Inspection,Hunslet,Minor wear
+WS00016,2022-12-10,Replacement,Hunslet,Profile corrected
+WS00017,2020-01-01,Lubrication,Bescot,Minor wear
+WS00017,2020-06-26,Inspection,Hunslet,Replaced due to crack
+WS00017,2021-03-24,Replacement,Hunslet,Replaced due to crack
+WS00017,2021-07-09,Lubrication,Hunslet,Minor wear
+WS00018,2020-01-01,Replacement,Bescot,Minor wear
+WS00018,2020-04-24,Turning,Crewe,Minor wear
+WS00018,2020-07-19,Replacement,Hunslet,OK
+WS00018,2020-11-02,Turning,Bescot,Profile corrected
+WS00019,2020-01-01,Replacement,Southampton,Replaced due to crack
+WS00019,2020-05-21,Lubrication,Hunslet,OK
+WS00019,2020-11-10,Turning,Bescot,Replaced due to crack
+WS00020,2020-01-01,Replacement,Southampton,OK
+WS00020,2021-01-29,Lubrication,Southampton,OK
+WS00020,2021-11-27,Turning,Crewe,OK
+WS00020,2022-07-19,Inspection,Bescot,OK
+WS00020,2022-08-14,Turning,Crewe,Profile corrected
+WS00020,2022-05-20,Lubrication,Hunslet,Replaced due to crack
