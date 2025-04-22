@@ -11,7 +11,7 @@ def generate_card(row):
     return dbc.Col(
         dbc.Card(
             dbc.CardBody([
-                html.H5(row["Wheelset Serial"]),
+                html.H5(row["Wheelset Serial Number"]),
                 html.P(f"Date: {row['Date']}"),
                 html.P(f"Maintenance Action: {row['Maintenance Action']}"),
                 html.P(f"Depot: {row['Depot']}"),
