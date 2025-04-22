@@ -10,12 +10,21 @@ history_df = pd.read_csv("data/wheelset_history.csv")
 maint_df = pd.read_csv("data/dashboard_maintenance_records.csv")
 
 def layout(wheelset_id=None):
+    if wheelset_id is None:
+        return html.H4("⚠️ No Wheelset ID provided.")
+
+    # Strip and standardise the ID
+    wheelset_id = wheelset_id.strip()
+
+    # Debug print — will show up in Render logs
+    print("Requested Wheelset ID:", wheelset_id)
+    print("Available:", condition_df["Wheelset Serial"].unique())
+
+    # Search
     wheel_info = condition_df[condition_df["Wheelset Serial"] == wheelset_id]
-    maintenance = maint_df[maint_df["Wheelset Serial"] == wheelset_id]
-    history = history_df[history_df["Wheelset Serial"] == wheelset_id]
 
     if wheel_info.empty:
-        return html.H4("Wheelset not found.")
+        return html.H4(f"❌ Wheelset {wheelset_id} not found.")
 
     info = wheel_info.iloc[0]
 
