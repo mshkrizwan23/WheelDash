@@ -22,10 +22,11 @@ def layout(wheelset_id=None):
 
 # Search for latest history
 wheel_history = history_df[history_df["Wheelset Serial Number"] == wheelset_id]
-latest_history = wheel_history.sort_values(by="Date", ascending=False).head(1)
+    latest_history = wheel_history.sort_values(by="Date", ascending=False).head(1)
 
-if latest_history.empty:
-    return html.H4(f"⚠️ No historical data found for {wheelset_id}.")
+    if latest_history.empty:
+        return html.H4(f"⚠️ No historical data found for {wheelset_id}.")
+
 
 info = latest_history.iloc[0]
 
