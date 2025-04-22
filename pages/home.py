@@ -12,9 +12,9 @@ def generate_card(row):
         dbc.Card([
             dbc.CardBody([
                 html.H5(row["Wheelset Serial Number"]),
-                html.P(f"Status: {row['Status']}"),
-                html.P(f"Depot: {row['Depot']}"),
-                html.P(f"Last Maintenance: {row['Last Maintenance Date']}"),
+                html.P(f"Status: {row['Date']}"),
+                html.P(f"Depot: {row['Maintenance Action']}"),
+                html.P(f"Last Maintenance: {row['Depot']}"),
                 html.P(f"Remarks: {row['Remarks']}"),
                 dcc.Link("🔍 View Details", href=f"/wheelset/{row['Wheelset Serial Number']}")
             ])
