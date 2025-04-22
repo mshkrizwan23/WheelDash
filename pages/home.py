@@ -5,7 +5,7 @@ import pandas as pd
 
 dash.register_page(__name__, path="/")
 
-df = pd.read_csv("data/wheelset_condition_sample.csv")
+df = pd.read_csv("data/wheelset_history.csv")
 
 def generate_card(row):
     return dbc.Col(
