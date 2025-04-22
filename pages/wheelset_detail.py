@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path_template="/wheelset/<wheelset_id>")
 
-condition_df = pd.read_csv("data/wheelset_condition_sample.csv")
+condition_df = pd.read_csv("data/wheelset_condition.csv")
 history_df = pd.read_csv("data/wheelset_history.csv")
 maint_df = pd.read_csv("data/dashboard_maintenance_records.csv")
 
