@@ -12,7 +12,7 @@ maint_df = pd.read_csv("data/dashboard_maintenance_records.csv")
 def layout(wheelset_id=None):
     wheel_info = condition_df[condition_df["Wheelset Serial"] == wheelset_id]
     maintenance = maint_df[maint_df["Wheelset Serial"] == wheelset_id]
-    history = history_df[history_df["Wheelset Serial Number"] == wheelset_id]
+    history = history_df[history_df["Wheelset Serial"] == wheelset_id]
 
     if wheel_info.empty:
         return html.H4("Wheelset not found.")
