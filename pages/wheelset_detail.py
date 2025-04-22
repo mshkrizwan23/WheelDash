@@ -32,10 +32,11 @@ def layout(wheelset_id=None):
         html.H3(f"Wheelset: {wheelset_id}"),
         html.Hr(),
         html.Div([
-            html.P(f"Status: {info['Status']}"),
-            html.P(f"Depot: {info['Depot']}"),
-            html.P(f"Last Maintenance: {info['Last Maintenance Date']}"),
-            html.P(f"Remarks: {info['Remarks']}"),
+        html.P(f"Date: {info['Date']}"),
+        html.P(f"Maintenance Action: {info['Maintenance Action']}"),
+        html.P(f"Depot: {info['Depot']}"),
+        html.P(f"Remarks: {info['Remarks']}"),
+
         ]),
 
         html.H4("🔧 Maintenance Records"),
