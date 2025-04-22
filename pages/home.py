@@ -9,16 +9,17 @@ df = pd.read_csv("data/wheelset_history.csv")
 
 def generate_card(row):
     return dbc.Col(
-        dbc.Card([
+        dbc.Card(
             dbc.CardBody([
-                html.H5(row["Wheelset Serial Number"]),
-                html.P(f"Status: {row['Date']}"),
-                html.P(f"Depot: {row['Maintenance Action']}"),
-                html.P(f"Last Maintenance: {row['Depot']}"),
+                html.H5(row["Wheelset Serial"]),
+                html.P(f"Date: {row['Date']}"),
+                html.P(f"Maintenance Action: {row['Maintenance Action']}"),
+                html.P(f"Depot: {row['Depot']}"),
                 html.P(f"Remarks: {row['Remarks']}"),
-                dcc.Link("🔍 View Details", href=f"/wheelset/{row['Wheelset Serial Number']}")
-            ])
-        ], className="mb-4", style={"height": "100%"}),
+                dcc.Link("🔍 View Details", href=f"/wheelset/{row['Wheelset Serial']}")
+            ]),
+            className="mb-4", style={"height": "100%"}
+        ),
         width=4
     )
 
