@@ -1,21 +1,29 @@
 import dash
-from dash import html
-import pandas as pd
+from dash import html, dcc
 import dash_bootstrap_components as dbc
+import pandas as pd
 
-dash.register_page(__name__, path='/', name='Dashboard')
+dash.register_page(__name__, path="/")
 
 df = pd.read_csv("data/wheelset_condition_sample.csv")
 
-def create_card(row):
-    return dbc.Card([
-        dbc.CardBody([
-            html.H5(row["Wheelset Serial Number"], className="card-title"),
-            html.P(f"Status: {row['Status']}"),
-            html.P(f"Depot: {row['Depot']}"),
-            html.P(f"Remarks: {row['Remarks']}"),
-            dbc.Button("View Details", href=f"/wheelset/{row['Wheelset Serial Number']}", color="primary")
-        ])
-    ], style={"width": "18rem", "margin": "10px"})
+def generate_card(row):
+    return dbc.Col(
+        dbc.Card([
+            dbc.CardBody([
+                html.H5(row["Wheelset Serial Number"]),
+                html.P(f"Status: {row['Status']}"),
+                html.P(f"Depot: {row['Depot']}"),
+                html.P(f"Last Maintenance: {row['Last Maintenance Date']}"),
+                html.P(f"Remarks: {row['Remarks']}"),
+                dcc.Link("🔍 View Details", href=f"/wheelset/{row['Wheelset Serial Number']}")
+            ])
+        ], className="mb-4", style={"height": "100%"}),
+        width=4
+    )
 
-layout = dbc.Row([dbc.Col(create_card(row), width="auto") for _, row in df.iterrows()])
+layout = dbc.Container([
+    dbc.Row([
+        generate_card(row) for _, row in df.iterrows()
+    ])
+], fluid=True)
