@@ -30,20 +30,18 @@ wheel_history = history_df[history_df["Wheelset Serial Number"] == wheelset_id]
 
 info = latest_history.iloc[0]
 
-return dbc.Container([
-    html.H3(f"Wheelset: {wheelset_id}"),
-    html.Hr(),
-    html.Div([
-        html.P(f"Date: {info['Date']}"),
-        html.P(f"Maintenance Action: {info['Maintenance Action']}"),
-        html.P(f"Depot: {info['Depot']}"),
-        html.P(f"Remarks: {info['Remarks']}"),
-    ]),
-
-
-        html.H4("🔧 Maintenance Records"),
+    return dbc.Container([
+        html.H3(f"Wheelset: {wheelset_id}"),
+        html.Hr(),
+        html.Div([
+            html.P(f"Date: {info['Date']}"),
+            html.P(f"Maintenance Action: {info['Maintenance Action']}"),
+            html.P(f"Depot: {info['Depot']}"),
+            html.P(f"Remarks: {info['Remarks']}"),
+        ]),
+        html.H4("🛠️ Maintenance Records"),
         dbc.Table.from_dataframe(maintenance, striped=True, bordered=True, hover=True),
-
         html.H4("📈 Wear History"),
         dbc.Table.from_dataframe(history, striped=True, bordered=True, hover=True),
     ], fluid=True)
+
